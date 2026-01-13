@@ -1,3 +1,4 @@
+-- TODO: Verify if this is still needed once scheme support is added to nvim-treesitter
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
