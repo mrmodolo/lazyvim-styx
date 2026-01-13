@@ -1,5 +1,9 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+-- if not vim.loop.fs_stat(lazypath) then
+-- API Renaming: In Neovim 0.9+, vim.loop.fs_stat was deprecated
+-- and moved to vim.uv.fs_stat as part of integrating the
+-- luv library (a Lua wrapper around libuv) more directly.
+if not vim.uv.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
