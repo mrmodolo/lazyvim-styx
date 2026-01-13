@@ -5,12 +5,15 @@
 -- vim.g.lazyvim_python_ruff = "ruff_lsp"
 -- views can only be fully collapsed with the global statusline
 -- https://github.com/yetone/avante.nvimhttps://github.com/yetone/avante.nvim
+
 vim.opt.laststatus = 3
 
+-- Conjure configuration for Scheme (Chicken Scheme)
 vim.g["conjure#client#scheme#stdio#command"] = "csi -quiet -:c"
 vim.g["conjure#client#scheme#stdio#prompt_pattern"] = "\n-#;%d-> "
 vim.g["conjure#client#scheme#stdio#value_prefix_pattern"] = true
 vim.g["conjure#mapping#doc_word"] = true
 
+-- Chez Scheme configuration (uncomment if using Chez Scheme)
 -- vim.g["conjure#client#scheme#stdio#command"] = "/home/modolo/opt/ChezScheme/bin/petite"
 -- vim.g["conjure#client#scheme#stdio#prompt_pattern"] = "> $?"
