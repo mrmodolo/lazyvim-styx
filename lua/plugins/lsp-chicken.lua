@@ -68,7 +68,25 @@ return {
             end,
             single_file_support = true,
           },
+          docs = {
+            description = [[
+Gemini response: https://gemini.google.com/app/d319018d3f6ca2dd
+
+https://wiki.call-cc.org/eggref/5/lsp-server
+
+Language Server Protocol (LSP) para Chicken Scheme.
+
+Requisitos:
+- Chicken Scheme instalado.
+- Egg do lsp-server instalado (`chicken-install -s lsp-server`).
+
+Este servidor fornece autocompletar, go-to-definition e documentação básica.
+
+REPL associado ao comando: <leader>sc
+            ]],
+          },
         }
+        lspconfig.chicken_lsp.setup({})
       end
 
       -- 2. Habilitar o servidor na lista de servidores do LazyVim
@@ -77,6 +95,23 @@ return {
         mason = false, -- IMPORTANTE: Diz ao LazyVim para não procurar no Mason
         cmd = { "/home/modolo/.local/bin/chicken-lsp-server", "--log-level", "debug" }, -- Força o comando aqui também para garantir
         filetypes = { "scheme", "scm" },
+        docs = {
+          description = [[
+Gemini response: https://gemini.google.com/app/d319018d3f6ca2dd
+
+https://wiki.call-cc.org/eggref/5/lsp-server
+
+Language Server Protocol (LSP) para Chicken Scheme.
+
+Requisitos:
+- Chicken Scheme instalado.
+- Egg do lsp-server instalado (`chicken-install -s lsp-server`).
+
+Este servidor fornece autocompletar, go-to-definition e documentação básica.
+
+REPL associado ao comando: <leader>sc
+            ]],
+        },
       }
     end,
   },
